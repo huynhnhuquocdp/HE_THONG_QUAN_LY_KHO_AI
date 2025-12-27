@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from "vue-router"; // cài vue-router:
 
 const routes = [
     {
-        path : '/',
-        component: ()=>import('../layout/wrapper/index.vue')
+        path : '/nhan-vien/dang-nhap',
+        component: ()=>import('../components/NhanVien/DangNhap/index.vue'),
+        meta: { layout: 'dangnhap-layout' }
     },
 ]
 
