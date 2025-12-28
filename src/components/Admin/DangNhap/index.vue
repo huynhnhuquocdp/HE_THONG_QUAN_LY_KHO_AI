@@ -31,7 +31,7 @@
         </div>
 
         <div class="form-header">
-          <h1>Đăng Nhập Nhân Viên</h1>
+          <h1>Đăng Nhập Admin</h1>
           <p>Vui lòng nhập thông tin đăng nhập của bạn</p>
         </div>
 
@@ -48,7 +48,7 @@
                 v-model="email"
                 type="email"
                 class="form-control"
-                placeholder="nhanvien@example.com"
+                placeholder="admin1@example.com"
                 required
                 autocomplete="email"
                 @blur="validateEmail"
@@ -96,18 +96,6 @@
             </div>
           </div>
 
-          <!-- Remember & Forgot password -->
-          <div class="form-options">
-            <label class="remember-check">
-              <input type="checkbox" v-model="remember" />
-              <span>Ghi nhớ đăng nhập trong 30 ngày</span>
-            </label>
-            <a href="#" class="forgot-link">
-              <i class="bx bx-question-mark"></i>
-              Quên mật khẩu?
-            </a>
-          </div>
-
           <!-- Submit button -->
           <button
             class="btn-submit"
@@ -128,10 +116,6 @@
 
         <!-- Footer info -->
         <div class="form-footer">
-          <p class="footer-text">
-            Bạn chưa có tài khoản?
-            <a href="#" class="signup-link">Liên hệ quản trị viên</a>
-          </p>
           <div class="security-info">
             <i class="bx bx-shield-alt"></i>
             <span>Kết nối được bảo mật bằng SSL</span>
@@ -180,7 +164,7 @@ export default {
           this.errors.email = "Email là bắt buộc.";
         } else if (!EMAIL_PATTERN.test(this.email)) {
           this.errors.email =
-            "Định dạng email không đúng. Ví dụ: nhanvien@example.com";
+            "Định dạng email không đúng. Ví dụ: admin@example.com";
         } else {
           delete this.errors.email;
         }
@@ -213,7 +197,7 @@ export default {
         this.errors.email = "Email là bắt buộc.";
       } else if (!EMAIL_PATTERN.test(this.email)) {
         this.errors.email =
-          "Định dạng email không đúng. Ví dụ: nhanvien@example.com";
+          "Định dạng email không đúng. Ví dụ: admin@example.com";
       }
 
       // Validate password
